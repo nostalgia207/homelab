@@ -42,7 +42,7 @@ Full diagram notes: [`diagrams/architecture.md`](./diagrams/architecture.md)
 | Bookstack   | VM101 | Internal documentation wiki - For fun |
 | qBittorrent | VM101 | Download client                       |
 
-Request flow (Jellyseerr → Radarr/Sonarr → qBittorrent → Jellyfin): see [`docs/services.md`](Services.md)
+Request flow (Jellyseerr → Radarr/Sonarr → qBittorrent → Jellyfin): see [`docs/services.md`](./docs/services.md)
 
 ## Skills demonstrated
 
