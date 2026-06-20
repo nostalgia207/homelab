@@ -1,6 +1,6 @@
 # Homelab Infrastructure
 
-> Self-hosted media, identity, and monitoring stack running on Proxmox — built as a hands-on lab for my transition from IT Support into DevOps/SRE.
+> Self-hosted media internally, documentation, and monitoring stack running on Proxmox. I am slowly building this homelab as a way for me to develop the necessary skills to transition from an IT Support role into DevOps/SRE.
 
 ![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=flat&logo=proxmox&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
@@ -42,7 +42,7 @@ Full diagram notes: [`diagrams/architecture.md`](./diagrams/architecture.md)
 | Bookstack   | VM101 | Internal documentation wiki - For fun |
 | qBittorrent | VM101 | Download client                       |
 
-Request flow (Jellyseerr → Radarr/Sonarr → qBittorrent → Jellyfin): see [`docs/services.md`](./docs/services.md)
+Request flow (Jellyseerr → Radarr/Sonarr → qBittorrent → Jellyfin): see [`docs/services.md`](Services.md)
 
 ## Skills demonstrated
 
@@ -62,7 +62,7 @@ Currently working through a structured plan to extend this lab into a full DevOp
 - [`docs/proxmox/`](./docs/proxmox) — VM creation, disk management, node updates
 - [`docs/docker/`](./docs/docker) — Compose syntax, backup/restore, Tailscale access
 - [`docs/networking/`](./docs/networking) — AD DS/DNS/DHCP setup
-- [`docs/services.md`](./docs/services.md) — service catalog + request flow diagram
+- [`docs/services.md`](Services.md) — service catalog + request flow diagram
 
 ## A note on the data in this repo
 

@@ -19,6 +19,10 @@ Then create a `compose.yml` file inside the service directory.
 - **volumes**: `host_path:container_path` — so writes inside the container land on the host filesystem
 - **restart**: `unless-stopped` — restarts the container on crash or VM reboot, unless it was manually stopped
 
+## Compose Example
+
+![[Pasted image 20260621003015.png]]
+
 ## Starting the stack
 
 ```bash

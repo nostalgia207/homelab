@@ -1,12 +1,14 @@
 # Disk Management
-
 ## Resizing a VM disk
 
+![[Pasted image 20260620234331.png]]
 1. Select the VM → **Hardware** tab
 2. Select the disk to resize → **Disk Action → Resize**
 3. Specify how much additional space to add
 
 Inside the guest, verify with `lsblk`, then expand the partition and filesystem to use the new space:
+
+![[Pasted image 20260620234516.png]]
 
 ```bash
 sudo growpart /dev/sda 3            # expand the partition
@@ -14,6 +16,10 @@ sudo pvresize /dev/sda3             # expand the physical volume
 sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv   # expand the logical volume
 sudo resize2fs /dev/ubuntu-vg/ubuntu-lv               # expand the filesystem
 ```
+
+## Final result:
+
+![[Pasted image 20260620235145.png]]
 
 ---
 
@@ -50,16 +56,30 @@ df -h | grep mountpoint
 
 ## Attaching a physical disk to a VM
 
-> Only do this after the disk has already been mounted on the Proxmox host first.
+### - Proxmox Shell
 
-**Proxmox shell:**
+> [!NOTE]
+> > ONLY DO THIS AFTER MOUNTING IT ON PROXMOX FIRST
 
-```bash
-ls -l /dev/disk/by-id/ | grep sdX            # get the persistent disk ID
-qm set <VMID> -scsi1 /dev/disk/by-id/<disk-id>   # attach to the VM
+- Get Persistent disk ID:
+
+		 ls -l /dev/disk/by-id/ | grep sdX
+
+> **Output example**: usb-TOSHIBA_External_USB_3.0_XXXX -> ../../sda
+
+- Attach to VM (example VM ID 101)
+
+```bash 
+qm set 101 -scsi1 /dev/disk/by-id/usb-TOSHIBA_External_USB_3.0_XXXX
 ```
 
+> [!NOTE]
+> - QM set XXX (VM number in proxmox)
+> - Copy the disk ID and paste at the end as shown
 **Inside the VM:**
+
+### - VM Shell
+
 
 ```bash
 lsblk                                # confirm the new disk is visible
@@ -68,6 +88,43 @@ sudo mount /dev/sdX1 /mnt/media      # mount it
 df -h | grep media                   # verify
 ```
 
-> The mount path inside the VM doesn't need to match the path used on the Proxmox host — they can differ.
+> [!NOTE]
+> The path was made the same as the one we created in proxmox for simplicity but it DOES NOT have to be the same
+> 
+> We can for example mount them differently on proxmox and the VM
+> 
+> 	Proxmox:
+> 	- /mnt/externaldrive1
+> 	
+> 	VM:
+> 	- /storage/jellyfin
 
-Make it persistent the same way as above (`blkid` → `/etc/fstab` entry), then test with `umount` / `mount -a` before rebooting.
+#### FSTAB - Make the mount persistent
+
+Get UUID:
+
+```bash
+sudo blkid /dev/DISKNAME
+```
+
+FSTAB:
+
+```bash
+sudo nano /etc/fstab
+```
+
+Add:
+
+```bash
+UUID=YOUR-UUID-HERE  /mnt/media  ext4  defaults  0  2
+```
+
+#### Test before reboot
+
+```Bash
+sudo umount /mnt/media
+sudo mount -a
+df -h | grep media
+```
+
+If no errors -> Good

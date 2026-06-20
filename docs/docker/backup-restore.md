@@ -16,7 +16,7 @@ This produces a single archive containing every compose file and every app's con
 
 ## Transferring the archive
 
-Use SSH/WinSCP to pull the archive off the source VM, then push it to the destination VM's home directory.
+Used WinSCP to pull the archive off the source VM, then push it to the destination VM's home directory.
 
 ## Installing Docker on the destination VM
 

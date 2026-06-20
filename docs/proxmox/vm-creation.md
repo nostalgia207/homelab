@@ -2,6 +2,7 @@
 
 ## Downloading an ISO
 
+![[Pasted image 20260620155341.png]]
 1. From the target node, download an ISO directly via URL
 2. Paste the URL, press **Query URL**, then **Download**
 
