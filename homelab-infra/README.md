@@ -22,25 +22,25 @@ Notes here were originally written for myself in Obsidian; this repo is the clea
 **Remote access:** Tailscale (mesh VPN, no exposed ports to WAN)
 **Network:** dual-bridge design — `vmbr0` for management/DC traffic, `vmbr1` for DHCP-served client VMs
 
-| VM | OS | Role |
-|---|---|---|
-| 100 | Windows Server 2025 | AD DS + DNS + DHCP (`homelab.local`) |
-| 101 | Ubuntu Server | Docker host — media stack + Bookstack |
-| 105 | Debian | Docker host — monitoring (Prometheus/Grafana, Pi-hole) *planned* |
+| VM  | OS                  | Role                                                             |
+| --- | ------------------- | ---------------------------------------------------------------- |
+| 100 | Windows Server 2025 | AD DS + DNS + DHCP                                               |
+| 101 | Ubuntu Server       | Docker host — media stack + Bookstack                            |
+| 105 | Debian              | Docker host — monitoring (Prometheus/Grafana, Pi-hole) *planned* |
 
 Full diagram notes: [`diagrams/architecture.md`](./diagrams/architecture.md)
 
 ## Services
 
-| Service | Host | Purpose |
-|---|---|---|
-| Jellyfin | VM101 | Media server |
-| Jellyseerr | VM101 | Media request UI |
-| Radarr | VM101 | Movie management |
-| Sonarr | VM101 | TV management |
-| Bazarr | VM101 | Subtitle management |
-| Bookstack | VM101 | Internal documentation wiki |
-| qBittorrent | VM101 | Download client |
+| Service     | Host  | Purpose                               |
+| ----------- | ----- | ------------------------------------- |
+| Jellyfin    | VM101 | Media server                          |
+| Jellyseerr  | VM101 | Media request UI                      |
+| Radarr      | VM101 | Movie management                      |
+| Sonarr      | VM101 | Shows management                      |
+| Bazarr      | VM101 | Subtitle management                   |
+| Bookstack   | VM101 | Internal documentation wiki - For fun |
+| qBittorrent | VM101 | Download client                       |
 
 Request flow (Jellyseerr → Radarr/Sonarr → qBittorrent → Jellyfin): see [`docs/services.md`](./docs/services.md)
 
