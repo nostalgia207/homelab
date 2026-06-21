@@ -25,7 +25,7 @@ This repo documents a homelab virtualized on Proxmox, with a Docker-based media 
 
 ## [Architecture](./diagrams/architecture.md)
 
-![Homelab architecture diagram](./diagrams/architecture.png)
+![Homelab architecture diagram](Images/architecture.png)
 
 **Hypervisor:** Proxmox VE, single node currently, second node planned
 **Remote access:** Tailscale

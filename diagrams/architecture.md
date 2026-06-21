@@ -1,6 +1,6 @@
 # Architecture
 
-![Homelab architecture diagram](./architecture.png)
+![Homelab architecture diagram](../Images/architecture.png)
 
 ## Traffic flow
 

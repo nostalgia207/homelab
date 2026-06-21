@@ -1,14 +1,14 @@
 # Disk Management
 ## Resizing a VM disk
 
-![[Pasted image 20260620234331.png]]
+![Resize VM disk](../../Images/Resize_VM_disk.png)
 1. Select the VM → **Hardware** tab
 2. Select the disk to resize → **Disk Action → Resize**
 3. Specify how much additional space to add
 
 Inside the guest, verify with `lsblk`, then expand the partition and filesystem to use the new space:
 
-![[Pasted image 20260620234516.png]]
+![lsblk before expanding disk](../../Images/LSBLK_before_expanding_disk.png)
 
 ```bash
 sudo growpart /dev/sda 3            # expand the partition
@@ -19,7 +19,7 @@ sudo resize2fs /dev/ubuntu-vg/ubuntu-lv               # expand the filesystem
 
 ## Final result:
 
-![[Pasted image 20260620235145.png]]
+![lsblk after expanding disk](../../Images/LSBLK_after_expanding_disk.png)
 
 ---
 

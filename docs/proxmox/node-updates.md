@@ -1,7 +1,7 @@
 # Updating a Proxmox Node
 
 
-![[Pasted image 20260620155232.png]]
+![Update Proxmox](../../Images/Update_Proxmox.png)
 
 1. Select the node in the left-hand menu
 2. Go to **Updates → Refresh**, and wait for it to complete

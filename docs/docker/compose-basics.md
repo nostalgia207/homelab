@@ -21,7 +21,7 @@ Then create a `compose.yml` file inside the service directory.
 
 ## Compose Example
 
-![[Pasted image 20260621003015.png]]
+![Docker Compose Example](../../Images/Docker_Compose_Example.png)
 
 ## Starting the stack
 
