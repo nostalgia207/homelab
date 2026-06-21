@@ -21,7 +21,7 @@ This repo documents a homelab virtualized on Proxmox, with a Docker-based media 
 
 
 > [!NOTE]
-> Notes here were originally written for myself in Obsidian; this repo is the cleaned-up, sanitized version for anyone curious how it's built.
+> Notes here were originally written for myself in Obsidian to keep track of progress also develop documentation skills. This repo is for anyone curious on how it's built.
 
 ## [Architecture](./diagrams/architecture.md)
 
