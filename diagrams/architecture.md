@@ -11,10 +11,13 @@
 
 ## Proxmox host
 
-Single node currently, with three VMs:
+Single node currently, with five VMs:
 
 - **VM 101 — Ubuntu Server**: Docker host for the media stack (Jellyfin & Bookstack for now)
 - **VM 105 — Debian**: Docker host for monitoring (Prometheus, Grafana) and Pi-hole
+- **VM 150 — OPNsense**: Firewall for tinkering / isolated lab network (vmbr1, no physical uplink)
+- **VM 151 — UbuntuOS**: Vm to access OPNsense web interface
+
 - **VM 100 — Windows Server**: Active Directory Domain Services, DNS, and DHCP for the lab domain
 
 ## Remote access
@@ -24,4 +27,4 @@ Tailscale runs on the relevant VMs to provide secure remote access without expos
 ## Notes
 
 - Second Proxmox node planned, to allow VM migration/HA testing and to split workloads further
-- Network is segmented across two bridges (`vmbr0` for management/AD traffic, `vmbr1` for DHCP-assigned client VMs). See [`docs/networking/ad-dns-dhcp.md`](../docs/networking/ad-dns-dhcp.md) for details
+- Network is segmented across two bridges (`vmbr0` for management/AD traffic, `vmbr1` for DHCP-assigned client VMs). See [`docs/networking/ad-dns-dhcp.md`](../docs/networking/0%20ad-dns-dhcp.md) for details

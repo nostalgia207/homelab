@@ -29,13 +29,15 @@ This repo documents a homelab virtualized on Proxmox, with a Docker-based media 
 
 **Hypervisor:** Proxmox VE, single node currently, second node planned
 **Remote access:** Tailscale
-**Network:** dual-bridge design — `vmbr0` for management/DC traffic, `vmbr1` for VMs (Different DHCP scope)
+**Network:** dual-bridge design — `vmbr0` bridged to the physical LAN, `vmbr1` fully isolated (no physical uplink), routed through an OPNsense firewall VM for WAN/LAN segmentation practice
 
-| VM  | OS                  | Role                                                             |
-| --- | ------------------- | ---------------------------------------------------------------- |
-| 100 | Windows Server 2025 | AD DS + DNS + DHCP                                               |
+| VM  | OS                  | Role                                                            |
+| --- | ------------------- | --------------------------------------------------------------- |
+| 100 | Windows Server 2025 | AD DS + DNS + DHCP                                              |
 | 101 | Ubuntu Server       | Docker host: media stack + Bookstack                            |
 | 105 | Debian              | Docker host: monitoring (Prometheus/Grafana, Pi-hole) *planned* |
+| 150 | OPNsense            | Firewall — isolated lab network, WAN/LAN segmentation practice  |
+| 151 | UbuntuOS            | VM to manage **OPNsense** since it's in an isolated subnet      |
 
 
 ## [Services](./docs/services.md)
@@ -55,6 +57,8 @@ This repo documents a homelab virtualized on Proxmox, with a Docker-based media 
 - **Containerization**: Docker Compose, bind mounts, backup/restore methodology, container networking
 - **Networking**: dual-bridge segmentation, DHCP/DNS via AD, Tailscale VPN, troubleshooting LAN-vs-VPN service binding issues
 - **Identity**: Active Directory Domain Services + DNS/DHCP lab environment
+- **Linux fundamentals**: user/group management, SSH key-based authentication, sshd hardening (disabling password auth and root login)
+- **Firewall/network segmentation**: OPNsense deployment on an isolated bridge, WAN/LAN interface assignment, subnet conflict resolution
 - **Systems migration**: full stack migration between hosts using a backup/restore strategy instead of full VM export
 - **Documentation**: (this repo)
 

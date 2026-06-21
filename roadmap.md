@@ -4,7 +4,7 @@ The plan: build a small full-stack app, then practice progressively real ways of
 
 ## Stage 1 — Linux Fundamentals (reinforce)
 
-- [ ] Re-do basic Ubuntu setup from scratch as practice: users/groups, SSH key auth, ufw firewall basics
+- [x] Re-do basic Ubuntu setup from scratch as practice: users/groups, SSH key auth, ufw firewall basics
 - [ ] systemd: write a custom unit file for a script/service
 - [ ] Shell scripting: write a small backup script for Docker volumes to external disk
 
