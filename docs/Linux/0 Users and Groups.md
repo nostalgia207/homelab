@@ -17,7 +17,7 @@ sudo usermod -aG devops test_user
 sudo usermod -aG docker test_user
 ```
 
-> [!warning] Docker group membership is effectively root-equivalent - a user in this group can mount the host's `/` into a container and modify anything on the system. Treat it like sudo access.
+> [!WARNING] Docker group membership is effectively root-equivalent - a user in this group can mount the host's `/` into a container and modify anything on the system. Treat it like sudo access.
 
 #### 4 - Verify
 
@@ -26,8 +26,8 @@ id test_user
 groups test_user
 ```
 
-> [!tip] To check all members of a given group instead of just one user: `getent group docker`
+> [!TIP] To check all members of a given group instead of just one user: `getent group docker`
 
-> [!note] Group membership changes don't apply to an already-open session. Log out/in (or reconnect via SSH) before testing.
+> [!NOTE] Group membership changes don't apply to an already-open session. Log out/in (or reconnect via SSH) before testing.
 
 ---
