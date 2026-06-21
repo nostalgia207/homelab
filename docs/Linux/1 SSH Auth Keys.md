@@ -6,7 +6,8 @@ ssh-keygen -t ed25519 -C "gacemarques@homelab"
 
 > **Ed25519 is a fast, modern elliptic-curve algorithm for SSH keys that gives strong security with a small key size and no known weaknesses.**
 
-> [!NOTE] Runs on the client not the VM. Creates `id_ed25519` (private key) and `id_ed25519.pub` (public key) in `~/.ssh/`. Optional passphrase encrypts the private key file locally.
+> [!NOTE]
+> Runs on the client not the VM. Creates `id_ed25519` (private key) and `id_ed25519.pub` (public key) in `~/.ssh/`. Optional passphrase encrypts the private key file locally.
 
 #### 2 - Copy public key to the VM
 
@@ -53,7 +54,8 @@ PermitRootLogin no
 sudo systemctl restart ssh
 ```
 
-> [!WARNING] Do not close the current SSH session until a new connection from a separate terminal is confirmed working. If something's misconfigured, the open session is the only way back in.
+> [!WARNING]
+> Do not close the current SSH session until a new connection from a separate terminal is confirmed working. If something's misconfigured, the open session is the only way back in.
 
 #### 7 - Test from a new terminal
 
@@ -67,4 +69,5 @@ Should only ask for the key passphrase - no Linux password prompt. Only close th
 
 Result: SSH access now requires a valid private key, and root cannot log in via SSH at all (even with a key) - only a regular user, then `sudo` from there.
 
-> [!WARNING] If the private key is lost or `~/.ssh/authorized_keys` is wiped, SSH access is locked out entirely. Recovery requires console access (e.g. Proxmox console), not SSH. Keep a backup of the private key.
+> [!WARNING]
+> If the private key is lost or `~/.ssh/authorized_keys` is wiped, SSH access is locked out entirely. Recovery requires console access (e.g. Proxmox console), not SSH. Keep a backup of the private key.

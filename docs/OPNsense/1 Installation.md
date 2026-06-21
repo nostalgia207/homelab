@@ -7,7 +7,8 @@ Memory: 4096 MB
 Disk: 20GB
 ```
 
-> [!warning] ZFS install warns below 3000MB RAM and may produce a corrupted/unbootable install (happened once during this build - fixed by bumping RAM to 4096MB and reinstalling). Set RAM to 4096MB before installing, not after.
+> [!warning]
+> ZFS install warns below 3000MB RAM and may produce a corrupted/unbootable install (happened once during this build - fixed by bumping RAM to 4096MB and reinstalling). Set RAM to 4096MB before installing, not after.
 
 **Network (2 NICs required):**
 
@@ -37,7 +38,8 @@ password: opnsense
 - Select disk
 - Set root password
 
-> [!warning] Remove/eject the CD/DVD drive in Proxmox Hardware before rebooting, or the boot order may loop back into the installer.
+> [!warning]
+> Remove/eject the CD/DVD drive in Proxmox Hardware before rebooting, or the boot order may loop back into the installer.
 
 ---
 
