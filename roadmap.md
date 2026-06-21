@@ -1,6 +1,6 @@
 # DevOps Roadmap
 
-The plan: build a small full-stack app, then practice progressively "real" ways of deploying it — manual Docker, then IaC, then Kubernetes, then CI/CD — using this homelab as the target environment.
+The plan: build a small full-stack app, then practice progressively real ways of deploying it. Manual Docker, then IaC, then Kubernetes, then CI/CD while using this homelab as the target environment.
 
 ## Stage 1 — Linux Fundamentals (reinforce)
 
@@ -14,7 +14,7 @@ The plan: build a small full-stack app, then practice progressively "real" ways 
 - [ ] Move existing compose files / scripts into a git repo
 - [ ] Practice branches, commits, `.gitignore`, basic PR workflow
 
-## Stage 3 — Docker, Deeper
+## Stage 3 — Docker
 
 - [ ] Write a custom Dockerfile (not just pulling images) for a simple app
 - [ ] Multi-stage builds
@@ -22,7 +22,7 @@ The plan: build a small full-stack app, then practice progressively "real" ways 
 
 ## Stage 4 — Node.js + React (the app)
 
-- [ ] Build a small full-stack app — e.g. a homelab dashboard showing service status / links
+- [ ] Build a small full-stack app (homelab dashboard showing service status / links)
 - [ ] Backend: Node.js + Express, simple API
 - [ ] Frontend: React (Vite), calls the API
 - [ ] Containerize both
@@ -30,14 +30,14 @@ The plan: build a small full-stack app, then practice progressively "real" ways 
 ## Stage 5 — Infrastructure as Code: Terraform
 
 - [ ] Install Terraform on a management VM or desktop
-- [ ] Use a Proxmox provider (bpg/proxmox or telmate/proxmox) to define VMs as code instead of the GUI
+- [ ] Use a Proxmox provider to define VMs as code instead of the GUI
 - [ ] Use cloud-init templates so new VMs auto-configure on first boot
 - [ ] Goal: destroy and recreate a test VM purely from `.tf` files
 
 ## Stage 6 — Configuration Management
 
 - [ ] Ansible: write a playbook that installs Docker + compose stacks on a fresh VM
-- [ ] Combine with Terraform — Terraform creates the VM, Ansible configures it
+- [ ] Combine with Terraform. Terraform creates the VM, Ansible configures it
 
 ## Stage 7 — Kubernetes (start small: k3s)
 
@@ -48,8 +48,8 @@ The plan: build a small full-stack app, then practice progressively "real" ways 
 
 ## Stage 8 — CI/CD
 
-- [ ] GitHub Actions (or Gitea Actions): on push, build a Docker image, push to a registry
-- [ ] Pipeline auto-deploys the updated image to k3s (via `kubectl` or ArgoCD/Flux for GitOps)
+- [ ] GitHub Actions: on push, build a Docker image, push to a registry
+- [ ] Pipeline auto-deploys the updated image to k3s (via `kubectl`)
 
 ## Stage 9 — Monitoring & Observability
 

@@ -24,4 +24,4 @@ Tailscale runs on the relevant VMs to provide secure remote access without expos
 ## Notes
 
 - Second Proxmox node planned, to allow VM migration/HA testing and to split workloads further
-- Network is segmented across two bridges (`vmbr0` for management/AD traffic, `vmbr1` for DHCP-assigned client VMs) — see [`docs/networking/ad-dns-dhcp.md`](../docs/networking/ad-dns-dhcp.md) for details
+- Network is segmented across two bridges (`vmbr0` for management/AD traffic, `vmbr1` for DHCP-assigned client VMs). See [`docs/networking/ad-dns-dhcp.md`](../docs/networking/ad-dns-dhcp.md) for details

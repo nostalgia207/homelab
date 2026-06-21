@@ -10,17 +10,26 @@
 
 ## About
 
-This repo documents a homelab I run and actively maintain — virtualized on Proxmox, with a Docker-based media stack, Active Directory lab, and a monitoring node in progress. I work as an IT Support Technician (Intune, Entra ID, M365, Veeam, Hyper-V day to day) and use this lab to build hands-on infrastructure and DevOps skills outside of work: Linux administration, containerization, networking, and — per the [roadmap](./roadmap.md) — Terraform, Ansible, Kubernetes (k3s), and CI/CD.
+This repo documents a homelab virtualized on Proxmox, with a Docker-based media stack, Active Directory lab, and a monitoring node in progress. I work as an IT Support Technician (Intune, Entra ID, M365, Veeam, Hyper-V day to day) and use this lab to develop skills in Infra and DevOps skills outside of work: Linux administration, containerization, networking.
 
-Notes here were originally written for myself in Obsidian; this repo is the cleaned-up, sanitized version for anyone curious how it's built.
+## [Roadmap](./roadmap.md) 
 
-## Architecture
+- Terraform
+- Ansible
+- Kubernetes
+- CI/CD.
+
+
+> [!NOTE]
+> Notes here were originally written for myself in Obsidian; this repo is the cleaned-up, sanitized version for anyone curious how it's built.
+
+## [Architecture](./diagrams/architecture.md)
 
 ![Homelab architecture diagram](./diagrams/architecture.png)
 
 **Hypervisor:** Proxmox VE, single node currently, second node planned
-**Remote access:** Tailscale (mesh VPN, no exposed ports to WAN)
-**Network:** dual-bridge design — `vmbr0` for management/DC traffic, `vmbr1` for DHCP-served client VMs
+**Remote access:** Tailscale
+**Network:** dual-bridge design — `vmbr0` for management/DC traffic, `vmbr1` for VMs (Different DHCP scope)
 
 | VM  | OS                  | Role                                                             |
 | --- | ------------------- | ---------------------------------------------------------------- |
@@ -28,9 +37,8 @@ Notes here were originally written for myself in Obsidian; this repo is the clea
 | 101 | Ubuntu Server       | Docker host — media stack + Bookstack                            |
 | 105 | Debian              | Docker host — monitoring (Prometheus/Grafana, Pi-hole) *planned* |
 
-Full diagram notes: [`diagrams/architecture.md`](./diagrams/architecture.md)
 
-## Services
+## [Services](./docs/services.md)
 
 | Service     | Host  | Purpose                               |
 | ----------- | ----- | ------------------------------------- |
@@ -40,22 +48,20 @@ Full diagram notes: [`diagrams/architecture.md`](./diagrams/architecture.md)
 | Sonarr      | VM101 | Shows management                      |
 | Bazarr      | VM101 | Subtitle management                   |
 | Bookstack   | VM101 | Internal documentation wiki - For fun |
-| qBittorrent | VM101 | Download client                       |
 
-Request flow (Jellyseerr → Radarr/Sonarr → qBittorrent → Jellyfin): see [`docs/services.md`](Services.md)
 
 ## Skills demonstrated
 
 - **Virtualization**: VM provisioning, disk resizing/expansion (LVM), physical disk passthrough on Proxmox
 - **Containerization**: Docker Compose, bind mounts, backup/restore methodology, container networking
-- **Networking**: dual-bridge segmentation, DHCP/DNS via AD, Tailscale mesh VPN, troubleshooting LAN-vs-VPN service binding issues
+- **Networking**: dual-bridge segmentation, DHCP/DNS via AD, Tailscale VPN, troubleshooting LAN-vs-VPN service binding issues
 - **Identity**: Active Directory Domain Services + DNS/DHCP lab environment
-- **Systems migration**: full stack migration between hosts using a backup/restore strategy instead of full VM export, with documented reasoning
-- **Documentation**: structured, versioned infra docs (this repo)
+- **Systems migration**: full stack migration between hosts using a backup/restore strategy instead of full VM export
+- **Documentation**: (this repo)
 
-## Roadmap
+## [Roadmap](./roadmap.md)
 
-Currently working through a structured plan to extend this lab into a full DevOps toolchain — Terraform (Proxmox provider), Ansible, k3s, GitOps, and Prometheus/Grafana monitoring. Full breakdown: [`roadmap.md`](./roadmap.md)
+Currently working through a structured plan to extend this lab into a full DevOps toolchain. Terraform (Proxmox provider), Ansible, k3s, GitOps, and Prometheus/Grafana monitoring.
 
 ## Documentation index
 
