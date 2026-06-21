@@ -49,7 +49,6 @@ This repo documents a homelab virtualized on Proxmox, with a Docker-based media 
 | Bazarr      | VM101 | Subtitle management                   |
 | Bookstack   | VM101 | Internal documentation wiki - For fun |
 
-
 ## Skills demonstrated
 
 - **Virtualization**: VM provisioning, disk resizing/expansion (LVM), physical disk passthrough on Proxmox
