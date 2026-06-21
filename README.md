@@ -21,7 +21,7 @@ This repo documents a homelab virtualized on Proxmox, with a Docker-based media 
 
 
 > [!NOTE]
-> Notes here were originally written for myself in Obsidian to keep track of progress also develop documentation skills. This repo is for anyone curious on how it's built.
+> Notes here were originally written for myself in Obsidian to keep track of progress and also develop documentation skills. This repo is for anyone curious on how it's built.
 
 ## [Architecture](./diagrams/architecture.md)
 
@@ -34,8 +34,8 @@ This repo documents a homelab virtualized on Proxmox, with a Docker-based media 
 | VM  | OS                  | Role                                                             |
 | --- | ------------------- | ---------------------------------------------------------------- |
 | 100 | Windows Server 2025 | AD DS + DNS + DHCP                                               |
-| 101 | Ubuntu Server       | Docker host — media stack + Bookstack                            |
-| 105 | Debian              | Docker host — monitoring (Prometheus/Grafana, Pi-hole) *planned* |
+| 101 | Ubuntu Server       | Docker host: media stack + Bookstack                            |
+| 105 | Debian              | Docker host: monitoring (Prometheus/Grafana, Pi-hole) *planned* |
 
 
 ## [Services](./docs/services.md)
