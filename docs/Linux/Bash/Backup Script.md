@@ -1,4 +1,4 @@
-#### Showcase of a simple backup script
+## Showcase of a simple backup script
 
 For standardization let's create a .sh script in **/usr/bin/bash**
 

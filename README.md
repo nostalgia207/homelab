@@ -36,7 +36,7 @@ This repo documents a homelab virtualized on Proxmox, with a Docker-based media 
 | 100 | Windows Server 2025 | AD DS + DNS + DHCP                                              |
 | 101 | Ubuntu Server       | Docker host: media stack + Bookstack                            |
 | 105 | Debian              | Docker host: monitoring (Prometheus/Grafana, Pi-hole) *planned* |
-| 150 | OPNsense            | Firewall — isolated lab network, WAN/LAN segmentation practice  |
+| 150 | OPNsense            | Firewall - isolated lab network, WAN/LAN segmentation practice  |
 | 151 | UbuntuOS            | VM to manage **OPNsense** since it's in an isolated subnet      |
 
 
