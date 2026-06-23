@@ -13,7 +13,7 @@ sudo nano /usr/bin/bash/docker_backup.sh
 2. Defining PATHs as **variables**
 3. Creating a directory for the backup destination
 
-4. We want to stop containers before we back them up so:
+4. We want to stop containers before we back them up so (backing up live containers risks corrupting the archive if files are written mid-backup.):
 	- docker stop - stops a container
 	- docker ps - lists containers
 	- -q (Lists ID of running containers)
@@ -21,9 +21,9 @@ sudo nano /usr/bin/bash/docker_backup.sh
 5. Compressing the folder we want - syntax
 	- TAR - command
 	
-	- -C (Creates the archive)
-	- -Z (Compresses with gzip)
-	- -F (Specifies the output filename)
+	- -c (Creates the archive)
+	- -z (Compresses with gzip)
+	- -f (Specifies the output filename)
 	
 	- And then we fetch the source
 
