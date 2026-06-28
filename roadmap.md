@@ -4,9 +4,9 @@ The plan: build a small full-stack app, then practice progressively real ways of
 
 ## Stage 1 — Linux Fundamentals (reinforce)
 
-- [x] Re-do basic Ubuntu setup from scratch as practice: users/groups, SSH key auth, ufw firewall basics
+- [x] Re-do basic Ubuntu setup from scratch as practice: users/groups, SSH key auth, ufw firewall basics ✅
 - [ ] systemd: write a custom unit file for a script/service
-- [x] Shell scripting: write a small backup script for Docker volumes to external disk
+- [x] Shell scripting: write a small backup script for Docker volumes to external disk ✅
 
 ## Stage 2 — Git / Version Control
 
@@ -63,5 +63,4 @@ The plan: build a small full-stack app, then practice progressively real ways of
 
 ## Notes
 
-- No need to follow these strictly in order — Stages 1–4 are good foundational practice, but Terraform (5) and k3s (7) can be explored in parallel once comfortable with Docker
 - The stable media stack VM stays untouched; all experimentation happens on a separate, disposable VM
