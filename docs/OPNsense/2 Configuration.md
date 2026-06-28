@@ -34,7 +34,7 @@ For simplicity I'm using the configuration wizard for initial setup and anything
 
 ###### Block RFC1918 Private Networks
 
-- I'd leave this unchecked but again since my wan is actually a private IP from my home network i need to uncheck it
+- I'd leave this check but again since my wan is actually a private IP from my home network i need to uncheck it
 
 
 ## LAN

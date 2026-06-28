@@ -22,6 +22,6 @@
 
 ## Notes
 
-- All services run as Docker containers via Compose, with config/data under bind-mounted host directories (see [`docs/docker/compose-basics.md`](./docker/compose-basics.md))
+- All services run as Docker containers via Compose, with config/data under bind-mounted host directories (see [`docs/docker/compose-basics.md`](Docker/compose-basics.md))
 - Media files are stored on a separately mounted disk, decoupled from container config backups
 - `mkvtoolnix` is planned for converting mp4/mov + srt files into MKV format
