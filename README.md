@@ -68,11 +68,13 @@ Currently working through a structured plan to extend this lab into a full DevOp
 
 ## Documentation index
 
-- [`docs/proxmox/`](./docs/proxmox) — VM creation, disk management, node updates
-- [`docs/docker/`](./docs/docker) — Compose syntax, backup/restore, Tailscale access
-- [`docs/networking/`](./docs/networking) — AD DS/DNS/DHCP setup
--  [`docs/OPNsense/`](./docs/OPNsense) — OPNsense lab setup, firewall rules, DHCP/DNS configuration
-- [`docs/services.md`](./docs/Services.md) — service catalog + request flow diagram
+- [`docs/linux/`](./docs/Linux) - Linux Administration
+- [`docs/terraform/`](./docs/Terraform) - HCL basics, local provider, Proxmox provider setup
+- [`docs/proxmox/`](./docs/proxmox) - VM creation, disk management, node updates
+- [`docs/docker/`](./docs/docker) - Compose syntax, backup/restore, Tailscale access
+- [`docs/networking/`](./docs/networking) - AD DS/DNS/DHCP setup
+-  [`docs/OPNsense/`](./docs/OPNsense) - OPNsense lab setup, firewall rules, DHCP/DNS configuration
+- [`docs/services.md`](./docs/Services.md) - service catalog + request flow diagram
 
 ## A note on the data in this repo
 
