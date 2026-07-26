@@ -19,10 +19,15 @@ ___
 > [!NOTE]
 > Terraform used the selected providers to generate the following execution plan
 
-![](../../Images/Terraform/5_Terraform_Plan.png)	+       Create
-	-       Destroy
-	~       Update in place
-	-/+     Destroy and recreate
+![](../../Images/Terraform/5_Terraform_Plan.png)	
+
+```bash
++       Create
+-       Destroy
+~       Update occuring
+-/+     Destroy and recreate 
+```
+
 
 > [!NOTE]
 > With `-out` you capture the exact plan as a file, then apply that specific file:
