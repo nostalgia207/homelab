@@ -12,7 +12,7 @@
 | Prowlarr   | Indexer management, feeds Radarr/Sonarr       |
 | Bookstack  | Internal documentation wiki                   |
 
-## Monitoring stack (VM 105) — planned
+## Monitoring stack (VM 105) - planned
 
 | Service | Purpose |
 |---|---|

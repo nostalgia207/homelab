@@ -12,13 +12,6 @@
 
 This repo documents a homelab virtualized on Proxmox, with a Docker-based media stack, Active Directory lab, and a monitoring node in progress. I work as an IT Support Technician (Intune, Entra ID, M365, Veeam, Hyper-V day to day) and use this lab to develop skills in Infra and DevOps skills outside of work: Linux administration, containerization, networking.
 
-## [Roadmap](./roadmap.md) 
-
-- Terraform
-- Ansible
-- Kubernetes
-- CI/CD.
-
 
 > [!NOTE]
 > Notes here were originally written for myself in Obsidian to keep track of progress and also develop documentation skills. This repo is for anyone curious on how it's built.
@@ -61,10 +54,6 @@ This repo documents a homelab virtualized on Proxmox, with a Docker-based media 
 - **Firewall/network segmentation**: OPNsense deployment on an isolated bridge, WAN/LAN interface assignment, subnet conflict resolution
 - **Systems migration**: full stack migration between hosts using a backup/restore strategy instead of full VM export
 - **Documentation**: (this repo)
-
-## [Roadmap](./roadmap.md)
-
-Currently working through a structured plan to extend this lab into a full DevOps toolchain. Terraform (Proxmox provider), Ansible, k3s, GitOps, and Prometheus/Grafana monitoring.
 
 ## Documentation index
 
