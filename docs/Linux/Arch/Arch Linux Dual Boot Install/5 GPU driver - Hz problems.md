@@ -1,3 +1,5 @@
+# Nvidia Drivers
+
 #### Symptom
 
 Monitor refresh rate capped at 240Hz instead of the panel's rated 400Hz. 

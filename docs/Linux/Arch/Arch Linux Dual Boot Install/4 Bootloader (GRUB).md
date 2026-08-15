@@ -1,3 +1,5 @@
+# GRUB
+
 #### 1 - Install GRUB
 
 	pacman -S grub efibootmgr

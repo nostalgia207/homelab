@@ -1,3 +1,5 @@
+# Partitioning the second NVMe disk (GPT, UEFI)
+
 Windows already installed on a separate SATA SSD (sda). Target disk for Arch is a second NVMe SSD (nvme0n1), used entirely for Arch (no separate games partition on this disk).
 
 > [!warning]
@@ -53,4 +55,4 @@ Inside fdisk:
 
 Result:
 
-![](Partitions.png)
+![[Images/Arch/Partitions.png]]

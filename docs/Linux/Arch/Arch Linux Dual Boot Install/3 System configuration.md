@@ -1,4 +1,7 @@
-All steps below run inside the chroot.
+# System configuration (locale, hostname, users, keyboard)
+
+> [!warning]
+> All steps below run inside the chroot.
 
 #### 1 - Timezone
 
