@@ -55,4 +55,4 @@ Inside fdisk:
 
 Result:
 
-![[Images/Arch/Partitions.png]]
+![](../../../../Images/Arch/Partitions.png)
